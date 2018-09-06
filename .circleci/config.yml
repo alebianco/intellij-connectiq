@@ -31,6 +31,3 @@ workflows:
     jobs:
     - build
         context: intellij-connectiq
-        filters:
-          branches:
-            only: master
