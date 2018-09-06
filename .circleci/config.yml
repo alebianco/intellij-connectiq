@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/intellij-connectiq
     docker:
-      - image: circleci/openjdk:8-jdk
+    - image: circleci/openjdk:8-jdk
 
     environment:
       JVM_OPTS: -Xmx3200m
@@ -14,9 +14,9 @@ jobs:
     - checkout
 
     - restore_cache:
-      keys:
-        - v1-dependencies-{{ checksum "build.gradle" }}
-        - v1-dependencies-
+        keys:
+          - v1-dependencies-{{ checksum "build.gradle" }}
+          - v1-dependencies-
 
     - run: gradle dependencies
 
