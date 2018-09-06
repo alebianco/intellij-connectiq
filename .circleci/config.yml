@@ -30,3 +30,7 @@ workflows:
   build_and_test:
     jobs:
     - build
+        context: intellij-connectiq
+        filters:
+          branches:
+            only: master
